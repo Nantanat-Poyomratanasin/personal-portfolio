@@ -1,19 +1,25 @@
 export default function Navbar({ currentPage, setCurrentPage }) {
   return (
     <nav
-      className="sticky top-0 z-50"
+      className="sticky top-0 z-50 pixelify-nav"
       style={{ backgroundColor: "#c9bab3", borderBottom: "3px solid #8b7d75" }}
     >
-      <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-        <button
-          className="text-2xl font-black cursor-pointer transition font-heading"
+      <div className="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
+        <h3
           onClick={() => setCurrentPage("home")}
-          style={{ color: "#5a5450" }}
+          className="cursor-pointer transition"
+          style={{
+            color: "#5a5450",
+            fontFamily: "'Pixelify Sans', sans-serif",
+            fontWeight: 400,
+          }}
+          role="button"
+          tabIndex={0}
         >
           Nantanat P.
-        </button>
+        </h3>
 
-        <div className="flex gap-8 font-semibold text-sm">
+        <div className="flex gap-8 font-semibold text-[18px]">
           <button
             onClick={() => setCurrentPage("home")}
             className="pb-2 transition"
@@ -21,6 +27,8 @@ export default function Navbar({ currentPage, setCurrentPage }) {
               color: currentPage === "home" ? "#5a5450" : "#7a7268",
               borderBottom:
                 currentPage === "home" ? "2px solid #8b7d75" : "none",
+              fontFamily: "'Pixelify Sans', sans-serif",
+              fontWeight: 400,
             }}
           >
             Home
@@ -33,6 +41,8 @@ export default function Navbar({ currentPage, setCurrentPage }) {
               color: currentPage === "about" ? "#5a5450" : "#7a7268",
               borderBottom:
                 currentPage === "about" ? "2px solid #8b7d75" : "none",
+              fontFamily: "'Pixelify Sans', sans-serif",
+              fontWeight: 400,
             }}
           >
             About
@@ -43,7 +53,11 @@ export default function Navbar({ currentPage, setCurrentPage }) {
             target="_blank"
             rel="noopener noreferrer"
             className="pb-2 transition"
-            style={{ color: "#7a7268" }}
+            style={{
+              color: "#7a7268",
+              fontFamily: "'Pixelify Sans', sans-serif",
+              fontWeight: 400,
+            }}
           >
             GitHub
           </a>

@@ -1,8 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&family=Cal+Sans&family=Caveat:wght@400..700&family=Licorice&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/* @import url("https://fonts.googleapis.com/css2?family=Cal+Sans&family=Caveat:wght@400..700&family=Licorice&family=Quicksand:wght@300..700&display=swap"); */
-@import url("https://fonts.googleapis.com/css2?family=Cal+Sans&family=Caveat:wght@400..700&family=Licorice&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&display=swap");
+
+/* Local Pixelify Sans font faces (use files in src/data/Pixelify_Sans) */
+@font-face {
+  font-family: "Pixelify Sans";
+  src: url("/src/data/Pixelify_Sans/static/PixelifySans-Regular.ttf")
+    format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pixelify Sans";
+  src: url("/src/data/Pixelify_Sans/static/PixelifySans-Medium.ttf")
+    format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pixelify Sans";
+  src: url("/src/data/Pixelify_Sans/static/PixelifySans-SemiBold.ttf")
+    format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pixelify Sans";
+  src: url("/src/data/Pixelify_Sans/static/PixelifySans-Bold.ttf")
+    format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
 
 * {
   margin: 0;
@@ -12,15 +48,26 @@
 
 body {
   font-family:
-    -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
-    "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    "Roboto Mono",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    "Roboto",
+    "Oxygen",
+    "Ubuntu",
+    "Cantarell",
+    "Fira Sans",
+    "Droid Sans",
+    "Helvetica Neue",
+    monospace;
+  font-weight: 300;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
   /* color: #5a5450; */
   background-color: #f5f1ea;
 
-  background-image: url("https://www.transparenttextures.com/patterns/soft-wallpaper.png");
+  background-image: url("/src/data/image/soft-wallpaper.png");
 
   background-repeat: repeat;
 }
@@ -100,4 +147,34 @@ html {
   justify-content: center;
   min-height: 280px;
   background-color: #e6d9cf;
+}
+
+.hide-scrollbar {
+  overflow-y: hidden;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.pixelify-nav,
+.pixelify-nav * {
+  font-family: "Pixelify Sans", sans-serif !important;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  -webkit-font-smoothing: none !important;
+  -moz-osx-font-smoothing: grayscale !important;
+  font-smooth: never !important;
+  text-rendering: optimizeSpeed;
+}
+
+/* Ensure the navbar title uses heading-3 sizing with Pixelify Sans */
+.pixelify-nav h3 {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.15;
+  margin: 0;
 }

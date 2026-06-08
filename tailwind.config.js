@@ -14,7 +14,7 @@ module.exports = {
 
       fontFamily: {
         heading: ['"Cal Sans"', "sans-serif"],
-        body: ['"Montserrat"', "sans-serif"],
+        body: ['"Roboto Mono"', "monospace"],
         script: ['"Caveat"', "cursive"],
         fancy: ['"Licorice"', "cursive"],
       },

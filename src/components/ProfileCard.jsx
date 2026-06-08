@@ -1,15 +1,16 @@
 import WindowCard from "./WindowCard";
+import profileImage from "../data/image/profile.jpg";
 
 export default function ProfileCard() {
   return (
     <WindowCard title="Profile">
       {/* profile image */}
       <img
-        src="../image/profile.jpg"
+        src={profileImage}
         alt="profile"
         className="
-          w-full
-          h-[320px]
+          w-[240px]
+          h-[280px]
           object-cover
           rounded-2xl
         "
@@ -18,11 +19,11 @@ export default function ProfileCard() {
       {/* description */}
       <div
         className="
-          mt-5
+          mt-4
           bg-[#F1ECE5]
           rounded-xl
           px-4
-          py-3
+          py-2
           text-center
           text-[#5F5B57]
         "

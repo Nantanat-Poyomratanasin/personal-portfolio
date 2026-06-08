@@ -1,69 +1,39 @@
 import SkillCard from "../components/SkillCard";
 import CertificateSlider from "../components/CertificateSlider";
 import PixelWindow from "../components/PixelWindow";
+import {
+  skillsData,
+  experiencesData,
+  certificationsData,
+} from "../data/resume-data";
 
 export default function About() {
-  const skillsData = [
-    {
-      category: "Frontend",
-      skills: ["HTML", "CSS", "JavaScript", "React", "Tailwind"],
-    },
-    {
-      category: "Backend",
-      skills: ["Node.js", "Express", "PostgreSQL", "MongoDB", "REST API"],
-    },
-    {
-      category: "UI/UX Design",
-      skills: [
-        "Figma",
-        "UI Design",
-        "UX Research",
-        "Prototyping",
-        "Responsive",
-      ],
-    },
-  ];
-
-  const experiences = [
-    {
-      title: "Senior Frontend Developer",
-      company: "Tech Company Inc.",
-      duration: "2022 - Present",
-      description:
-        "Led development of customer-facing applications using React and modern web technologies. Improved performance by 40% through code optimization and architecture improvements.",
-    },
-    {
-      title: "Full Stack Developer",
-      company: "Digital Solutions Ltd.",
-      duration: "2020 - 2022",
-      description:
-        "Developed and maintained full-stack web applications. Worked with cross-functional teams to deliver features and improve user experience. Built REST APIs and implemented database schemas.",
-    },
-    {
-      title: "Junior Developer",
-      company: "StartUp Co.",
-      duration: "2019 - 2020",
-      description:
-        "Started career building web applications with HTML, CSS, and JavaScript. Collaborated with senior developers and gained hands-on experience in agile development practices.",
-    },
-  ];
+  const experiences = experiencesData;
 
   return (
     <div className="flex-1">
       {/* Skills Section */}
-      <section className="py-20 px-6" style={{ backgroundColor: "#e6d9cf" }}>
-        <div className="max-w-6xl mx-auto">
+      <section className="py-10 px-8" style={{ backgroundColor: "#e6d9cf" }}>
+        <div className="max-w-8xl max-h-[520px] mx-10">
           <h2
             className="text-5xl font-black text-center mb-2"
             style={{ color: "#5a5450" }}
           >
             Skills
           </h2>
-          <p className="text-center mb-12" style={{ color: "#7a7268" }}>
-            Technologies and tools I work with
+          <p
+            className="text-center mb-8 text-lg"
+            style={{ color: "#6E6A67" }}
+            style={{
+              fontFamily: "'Pixelify Sans', sans-serif",
+              fontWeight: 400,
+              color: "#5a5450",
+            }}
+          >
+            Technologies & Tools
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ">
             {skillsData.map((skillGroup, index) => (
               <SkillCard
                 key={index}
@@ -76,15 +46,22 @@ export default function About() {
       </section>
 
       {/* Experience Section */}
-      <section className="py-20 px-6" style={{ backgroundColor: "#d4c5b9" }}>
+      <section className="py-12 px-8" style={{ backgroundColor: "#d4c5b9" }}>
         <div className="max-w-4xl mx-auto">
           <h2
-            className="text-5xl font-black text-center mb-2"
+            className="text-5xl font-black text-center mb-3"
             style={{ color: "#5a5450" }}
           >
-            Work Experience
+            Experience
           </h2>
-          <p className="text-center mb-12" style={{ color: "#7a7268" }}>
+          <p
+            className="text-center mb-12 text-lg"
+            style={{
+              fontFamily: "'Pixelify Sans', sans-serif",
+              fontWeight: 400,
+              color: "#5a5450",
+            }}
+          >
             My professional journey
           </p>
 
@@ -106,15 +83,26 @@ export default function About() {
                 >
                   {exp.title}
                 </h4>
-                <p className="text-sm mb-2" style={{ color: "#7a7268" }}>
+                <p
+                  className="text-sm mb-2 font-medium"
+                  style={{ color: "#6E6A67" }}
+                >
                   {exp.company}
                 </p>
-                <p className="text-xs mb-3" style={{ color: "#a89d96" }}>
+                <p
+                  className="text-xs mb-3 font-medium"
+                  style={{ color: "#6E6A67" }}
+                >
                   {exp.duration}
                 </p>
-                <p className="leading-relaxed" style={{ color: "#7a7268" }}>
-                  {exp.description}
-                </p>
+                <ul
+                  className="list-disc list-inside space-y-2 text-sm font-medium"
+                  style={{ color: "#6E6A67" }}
+                >
+                  {exp.points?.map((point, pointIndex) => (
+                    <li key={pointIndex}>{point}</li>
+                  ))}
+                </ul>
               </div>
             ))}
           </div>
@@ -122,7 +110,7 @@ export default function About() {
       </section>
 
       {/* Certificates Section */}
-      <section className="py-20 px-6" style={{ backgroundColor: "#e6d9cf" }}>
+      <section className="py-12 px-8" style={{ backgroundColor: "#e6d9cf" }}>
         <div className="max-w-4xl mx-auto">
           <h2
             className="text-5xl font-black text-center mb-2"
@@ -130,11 +118,18 @@ export default function About() {
           >
             Certificates
           </h2>
-          <p className="text-center mb-12" style={{ color: "#7a7268" }}>
+          <p
+            className="text-center mb-12 text-lg"
+            style={{
+              fontFamily: "'Pixelify Sans', sans-serif",
+              fontWeight: 400,
+              color: "#5a5450",
+            }}
+          >
             Professional certifications and achievements
           </p>
 
-          <CertificateSlider />
+          <CertificateSlider certificates={certificationsData} />
         </div>
       </section>
     </div>
