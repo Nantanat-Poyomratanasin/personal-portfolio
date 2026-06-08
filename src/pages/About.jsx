@@ -1,10 +1,12 @@
 import SkillCard from "../components/SkillCard";
 import CertificateSlider from "../components/CertificateSlider";
-import PixelWindow from "../components/PixelWindow";
+
 import {
   skillsData,
   experiencesData,
   certificationsData,
+  educationData,
+  languageData,
 } from "../data/resume-data";
 
 export default function About() {
@@ -105,6 +107,80 @@ export default function About() {
                 </ul>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Education & Languages (centered heading, two equal columns) */}
+      <section className="py-12 px-8" style={{ backgroundColor: "#f3f0e8" }}>
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-black mb-3" style={{ color: "#5a5450" }}>
+            Education & Languages
+          </h2>
+          <p
+            className="text-center mb-8 text-lg"
+            style={{
+              fontFamily: "'Pixelify Sans', sans-serif",
+              fontWeight: 400,
+              color: "#5a5450",
+            }}
+          >
+            My academic journey
+          </p>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start text-left">
+            <div>
+              <div className="space-y-6">
+                {educationData.map((edu, i) => (
+                  <div key={i} className="px-4">
+                    <h4
+                      className="text-xl font-semibold"
+                      style={{ color: "#5a5450" }}
+                    >
+                      {edu.degree} — {edu.field}
+                    </h4>
+                    <p
+                      className="text-sm font-medium"
+                      style={{ color: "#6E6A67" }}
+                    >
+                      {edu.school} · {edu.duration}
+                    </p>
+                    {edu.honors && (
+                      <p className="text-sm" style={{ color: "#6E6A67" }}>
+                        {edu.honors}
+                      </p>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <div className="space-y-6">
+                {languageData.map((lang, idx) => (
+                  <div key={idx}>
+                    <h4
+                      className="text-xl font-semibold"
+                      style={{ color: "#5a5450" }}
+                    >
+                      {lang.language}
+                    </h4>
+                    <p
+                      className="text-sm font-medium"
+                      style={{ color: "#6E6A67" }}
+                    >
+                      {lang.level}{" "}
+                    </p>
+                    <p
+                      className="text-sm font-medium"
+                      style={{ color: "#6E6A67" }}
+                    >
+                      {lang.certification ? `${lang.certification}` : ""}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>

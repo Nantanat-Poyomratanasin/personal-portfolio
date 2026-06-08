@@ -1,24 +1,19 @@
-import { useState } from "react";
+import { Routes, Route } from "react-router-dom";
+
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Footer from "./components/Footer";
 
 function App() {
-  const [currentPage, setCurrentPage] = useState("home");
-
   return (
-    <div
-      className="w-full
-        min-h-screen
-        flex
-        flex-col 
-        "
-    >
-      <Navbar currentPage={currentPage} setCurrentPage={setCurrentPage} />
+    <div className="w-full min-h-screen flex flex-col">
+      <Navbar />
 
-      {currentPage === "home" && <Home />}
-      {currentPage === "about" && <About />}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
 
       <Footer />
     </div>

@@ -12,13 +12,13 @@ export default function HeroSection({ name, title, summary, resumeLink }) {
       pt-8
       pb-2
       mt-11
+      ml-14
       gap-3
       items-start
       max-h-[360px]
       max-w-[640px]
       flex
       flex-col
-      
       lg:flex-row
     "
     >

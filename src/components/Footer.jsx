@@ -6,10 +6,13 @@ export default function Footer() {
   });
 
   return (
-    <footer className="bg-cream-800 text-black py-12 px-6 text-start border-t-4 border-gray-900 mt-auto">
+    <footer
+      className=" text-black py-12 px-6 text-start border-t-4 border-gray-900 mt-auto"
+      style={{ backgroundColor: "#b8a89d" }}
+    >
       <p className="mb-3">&copy; 2026 My Portfolio. All rights reserved.</p>
 
-      <p className="text-xs text-gray-400">Last update on {now}</p>
+      <p className="text-xs text-black">Last update on {now}</p>
     </footer>
   );
 }

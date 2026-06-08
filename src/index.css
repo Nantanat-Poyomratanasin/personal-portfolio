@@ -178,3 +178,99 @@ html {
   line-height: 1.15;
   margin: 0;
 }
+
+.pixelify-nav {
+  position: relative;
+  overflow: hidden;
+
+  background: #c9bab3;
+
+  border-bottom: 2px solid #8b7d75;
+}
+
+.pixelify-nav > * {
+  position: relative;
+  z-index: 1;
+}
+.pixel-nav-btn {
+  position: relative;
+}
+
+.pixel-nav-btn::after {
+  content: "";
+  position: absolute;
+
+  left: 0;
+  bottom: -1px;
+
+  width: 0;
+  height: 4px;
+
+  background: repeating-linear-gradient(
+    to right,
+    #8b7d75 0 4px,
+    transparent 4px 8px
+  );
+
+  transition: width 0.2s ease;
+}
+
+.pixel-nav-btn:hover::after {
+  width: 100%;
+}
+
+.active-nav::after {
+  width: 100%;
+}
+
+.project-constellation {
+  position: relative;
+}
+
+.project-constellation::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+
+  background-image:
+    linear-gradient(#8b7d75 0 0), linear-gradient(#8b7d75 0 0),
+    linear-gradient(#8b7d75 0 0), linear-gradient(#8b7d75 0 0),
+    linear-gradient(#8b7d75 0 0), linear-gradient(#efe7de 0 0),
+    linear-gradient(#efe7de 0 0), linear-gradient(#efe7de 0 0),
+    linear-gradient(#efe7de 0 0), linear-gradient(#8b7d75 0 0),
+    linear-gradient(#8b7d75 0 0), linear-gradient(#efe7de 0 0),
+    linear-gradient(#8b7d75 0 0), linear-gradient(#efe7de 0 0);
+
+  background-repeat: no-repeat;
+
+  background-size:
+    8px 8px,
+    14px 14px,
+    10px 10px,
+    6px 6px,
+    12px 12px,
+    8px 8px,
+    16px 16px,
+    10px 10px;
+
+  background-position:
+    5% 15%,
+    8% 22%,
+    12% 12%,
+    15% 28%,
+    18% 20%,
+    28% 15%,
+    36% 60%,
+    45% 12%,
+    52% 80%,
+    60% 35%,
+    68% 8%,
+    75% 55%,
+    82% 20%,
+    88% 75%,
+    94% 15%,
+    98% 45%;
+
+  opacity: 0.8;
+}

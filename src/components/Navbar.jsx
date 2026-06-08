@@ -1,12 +1,11 @@
+import { NavLink } from "react-router-dom";
+
 export default function Navbar({ currentPage, setCurrentPage }) {
   return (
-    <nav
-      className="sticky top-0 z-50 pixelify-nav"
-      style={{ backgroundColor: "#c9bab3", borderBottom: "3px solid #8b7d75" }}
-    >
+    <nav className="pixelify-nav" style={{ backgroundColor: "#c9bab3" }}>
       <div className="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
-        <h3
-          onClick={() => setCurrentPage("home")}
+        <NavLink
+          to="/"
           className="cursor-pointer transition"
           style={{
             color: "#5a5450",
@@ -17,42 +16,42 @@ export default function Navbar({ currentPage, setCurrentPage }) {
           tabIndex={0}
         >
           Nantanat P.
-        </h3>
+        </NavLink>
 
         <div className="flex gap-8 font-semibold text-[18px]">
-          <button
-            onClick={() => setCurrentPage("home")}
-            className="pb-2 transition"
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              `pixel-nav-btn pb-2 transition ${isActive ? "active-nav" : ""}`
+            }
             style={{
-              color: currentPage === "home" ? "#5a5450" : "#7a7268",
-              borderBottom:
-                currentPage === "home" ? "2px solid #8b7d75" : "none",
+              color: "#7a7268",
               fontFamily: "'Pixelify Sans', sans-serif",
               fontWeight: 400,
             }}
           >
             Home
-          </button>
+          </NavLink>
 
-          <button
-            onClick={() => setCurrentPage("about")}
-            className="pb-2 transition"
+          <NavLink
+            to="/about"
+            className={({ isActive }) =>
+              `pixel-nav-btn pb-2 transition ${isActive ? "active-nav" : ""}`
+            }
             style={{
-              color: currentPage === "about" ? "#5a5450" : "#7a7268",
-              borderBottom:
-                currentPage === "about" ? "2px solid #8b7d75" : "none",
+              color: "#7a7268",
               fontFamily: "'Pixelify Sans', sans-serif",
               fontWeight: 400,
             }}
           >
             About
-          </button>
+          </NavLink>
 
           <a
             href="https://github.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="pb-2 transition"
+            className="pixel-nav-btn pb-1 transition"
             style={{
               color: "#7a7268",
               fontFamily: "'Pixelify Sans', sans-serif",

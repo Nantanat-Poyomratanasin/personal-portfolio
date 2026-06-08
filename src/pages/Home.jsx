@@ -13,7 +13,7 @@ export default function Home() {
       // category: "End-to-end",
       description:
         "A full-stack e-commerce website built with React, Node.js, and MongoDB. Features include Search product, cart and ordermanagement, and secure Login or registration.",
-      viewLink: "https://group-project-03-sprint-02-chi.vercel.app/",
+      viewLink: "https://group-project-03-sprint-02-oalifxv36.vercel.app/",
       githubLink:
         "https://github.com/Nantanat-Poyomratanasin/group_project_03_sprint_02.git",
     },
@@ -53,7 +53,7 @@ export default function Home() {
       </div>
 
       {/* Featured Projects Section */}
-      <section style={{ backgroundColor: "#F5F1EA" }} className="mt-4">
+      <section style={{ backgroundColor: "#F5F1EA" }} className="mt-4 relative">
         <div className="max-w-[920px] mx-auto py-14">
           {/* heading */}
           <div className=" text-center mb-15">
@@ -84,7 +84,7 @@ export default function Home() {
 
       {/* Social Links Section */}
       <section
-        className="py-12 px-6 text-center flex flex-col gap-4 items-center"
+        className="relative project-constellation py-12 px-6 text-center flex flex-col gap-4 items-center"
         style={{ backgroundColor: "#d4c5b9" }}
       >
         <h2

@@ -158,7 +158,7 @@ export const certificationsData = [
 export const languageData = [
   {
     language: "English",
-    level: "Fluent",
+    level: "Upper-intermediate",
     certification: "TOEIC Score: 885",
   },
   {
