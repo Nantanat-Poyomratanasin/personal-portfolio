@@ -9,8 +9,8 @@ export default function ProfileCard() {
         src={profileImage}
         alt="profile"
         className="
-          w-[240px]
-          h-[280px]
+          w-[200px]
+          h-[240px]
           object-cover
           rounded-2xl
         "

@@ -9,13 +9,12 @@ export default function HeroSection({ name, title, summary, resumeLink }) {
       shadow-soft
       pl-12
       pr-8
-      pt-8
-      pb-2
-      mt-11
-      ml-14
+      pt-6
+      py-6
+      ml-16
       gap-3
       items-start
-      max-h-[360px]
+      max-h-[320px]
       max-w-[640px]
       flex
       flex-col

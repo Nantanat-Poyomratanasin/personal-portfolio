@@ -1,6 +1,6 @@
 export default function WindowCard({ title, children, className = "" }) {
   return (
-    <div className="pr-8 py-6 mr-5 max-w-[320px] ">
+    <div className="pr-5 py-6  max-w-[280px]">
       <div
         className={`
         bg-[#FAF8F4]
@@ -75,7 +75,7 @@ export default function WindowCard({ title, children, className = "" }) {
         </div>
 
         {/* content */}
-        <div className="p-8">{children}</div>
+        <div className="p-5">{children}</div>
       </div>
     </div>
   );

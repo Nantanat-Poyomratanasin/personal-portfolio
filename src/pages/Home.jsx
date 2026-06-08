@@ -12,7 +12,7 @@ export default function Home() {
       tags: ["Full stack", "Web Development"],
       // category: "End-to-end",
       description:
-        "A full-stack e-commerce website built with React, Node.js, and MongoDB. Features include Search product, cart and ordermanagement, and secure Login or registration.",
+        "A full-stack e-commerce website built with React, Node.js, and MongoDB. Features include Search product, cart and order management, and secure Login or registration.",
       viewLink: "https://group-project-03-sprint-02-oalifxv36.vercel.app/",
       githubLink:
         "https://github.com/Nantanat-Poyomratanasin/group_project_03_sprint_02.git",
@@ -41,7 +41,7 @@ export default function Home() {
 
   return (
     <div className="font-body">
-      <div className="max-w-[1180px]  grid grid-cols-1 lg:grid-cols-[max-content_360px] gap-5 justify-center">
+      <div className="max-w-[1080px] mx-auto grid grid-cols-1 lg:grid-cols-[max-content_360px] gap-1 items-center justify-center justify-items-center">
         <Hero
           name={profileData.name}
           title={profileData.title}
@@ -53,10 +53,10 @@ export default function Home() {
       </div>
 
       {/* Featured Projects Section */}
-      <section style={{ backgroundColor: "#F5F1EA" }} className="mt-4 relative">
+      <section style={{ backgroundColor: "#F5F1EA" }} className="relative">
         <div className="max-w-[920px] mx-auto py-14">
           {/* heading */}
-          <div className=" text-center mb-15">
+          <div className="text-center mb-15">
             <h2 className="text-5xl font-black" style={{ color: "#2F2C29" }}>
               Featured Projects
             </h2>
@@ -92,7 +92,6 @@ export default function Home() {
           style={{
             fontFamily: "'Pixelify Sans', sans-serif",
             fontWeight: 400,
-
             color: "#5a5450",
           }}
         >
@@ -101,11 +100,8 @@ export default function Home() {
 
         <div className="flex gap-6 justify-center flex-wrap max-w-2xl mx-auto my-4">
           <SocialCard title="LinkedIn" href={profileData.linkedin} />
-
           <SocialCard title="GitHub" href={profileData.github} />
-
           <SocialCard title="Email" href={`mailto:${profileData.email}`} />
-
           {/* <SocialCard title="Contact" href={`tel:${profileData.phone}`} /> */}
         </div>
       </section>
