@@ -13,7 +13,7 @@ export default function Home() {
       // category: "End-to-end",
       description:
         "A full-stack e-commerce website built with React, Node.js, and MongoDB. Features include Search product, cart and order management, and secure Login or registration.",
-      viewLink: "https://group-project-03-sprint-02-oalifxv36.vercel.app/",
+      viewLink: "https://group-project-03-sprint-02-seven.vercel.app/",
       githubLink:
         "https://github.com/Nantanat-Poyomratanasin/group_project_03_sprint_02.git",
     },
