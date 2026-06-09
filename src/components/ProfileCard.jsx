@@ -9,10 +9,18 @@ export default function ProfileCard() {
         src={profileImage}
         alt="profile"
         className="
-          w-[200px]
-          h-[240px]
-          object-cover
-          rounded-2xl
+          block
+    mx-auto
+
+    lg:w-[200px]
+    lg:h-[240px]
+
+    w-[140px]
+    h-[180px]
+    mt-2
+
+    object-cover
+    rounded-2xl
         "
       />
 
@@ -24,9 +32,18 @@ export default function ProfileCard() {
           rounded-xl
           px-4
           py-2
+          my-4
+          mx-1
+          lg:px-3
+          lg:py-1
           text-center
           text-[#5F5B57]
         "
+        style={{
+          fontFamily: "'Pixelify Sans', sans-serif",
+          fontWeight: 500,
+          color: "#5a5450",
+        }}
       >
         • Open to work •
       </div>

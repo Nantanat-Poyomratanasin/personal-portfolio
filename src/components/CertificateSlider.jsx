@@ -21,11 +21,11 @@ export default function CertificateSlider({ certificates }) {
   const closeModal = () => setSelectedImage(null);
 
   return (
-    <div className="mt-12 relative">
-      <div className="flex items-center gap-4">
+    <div className="my-6 relative">
+      <div className="flex items-center gap-2 md:gap-4">
         <button
           onClick={() => handleScroll("left")}
-          className="flex-shrink-0 pixel-btn"
+          className="hidden md:block flex-shrink-0 pixel-btn"
           style={{
             fontFamily: "'Pixelify Sans', sans-serif",
             fontWeight: 500,
@@ -37,14 +37,17 @@ export default function CertificateSlider({ certificates }) {
 
         <div
           id="certificate-slider"
-          className="flex gap-6 overflow-x-auto overflow-y-hidden scroll-smooth flex-1 hide-scrollbar"
+          className="px-8 flex item-center gap-3 md:gap-8 lg:gap-6 sm:gap-8 justify-start md:justify-start overflow-x-auto overflow-y-hidden scroll-smooth flex-1 hide-scrollbar"
           style={{ scrollBehavior: "smooth", touchAction: "pan-x" }}
         >
           {certificates.map((cert, index) => (
             <div
               key={index}
-              className="flex-shrink-0 rounded-3xl bg-white border-2 border-gray-300 shadow-soft pixel-card overflow-hidden"
-              style={{ flex: "0 0 calc(33.333% - 1rem)" }}
+              className="flex-shrink-0 rounded-3xl bg-white border-2 border-gray-300 shadow-soft pixel-card overflow-hidden flex-shrink-0
+              w-[85%]
+              sm:w-[90%]
+              md:w-[calc(50%-1rem)]
+              lg:w-[calc(33.333%-0.5rem)]"
             >
               {cert.image ? (
                 <button
@@ -55,21 +58,23 @@ export default function CertificateSlider({ certificates }) {
                   <img
                     src={cert.image}
                     alt={cert.title}
-                    className="h-44 w-full object-cover cursor-pointer"
+                    className="md:h-48 lg:h-44  sm:h-72  w-full object-cover cursor-pointer"
                   />
                 </button>
               ) : (
-                <div className="h-44 flex items-center justify-center bg-[#f3f0e8] text-4xl">
+                <div className="h-[180px] md:h-40 lg:h-44 flex items-center justify-center bg-[#f3f0e8] text-3xl md:text-4xl">
                   🏆
                 </div>
               )}
 
-              <div className="p-4 text-left">
-                <div className="font-semibold text-base text-[#2f2c29]">
+              <div className="px-3 pb-3 md:p-4 text-left">
+                <div className="font-semibold text-sm md:text-base text-[#2f2c29]">
                   {cert.title}
                 </div>
-                <div className="text-sm text-gray-600 mt-2">{cert.issuer}</div>
-                <div className="text-xs text-gray-500 mt-3">{cert.date}</div>
+                <div className="text-xs md:text-sm text-gray-600 mt-1">
+                  {cert.issuer}
+                </div>
+                <div className="text-xs text-gray-500 mt-1">{cert.date}</div>
               </div>
             </div>
           ))}
@@ -77,7 +82,7 @@ export default function CertificateSlider({ certificates }) {
 
         <button
           onClick={() => handleScroll("right")}
-          className="flex-shrink-0 pixel-btn"
+          className="hidden md:block flex-shrink-0 pixel-btn"
           style={{
             fontFamily: "'Pixelify Sans', sans-serif",
             fontWeight: 500,

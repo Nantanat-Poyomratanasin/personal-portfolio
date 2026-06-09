@@ -1,6 +1,14 @@
 export default function WindowCard({ title, children, className = "" }) {
   return (
-    <div className="pr-5 py-6  max-w-[280px]">
+    <div
+      className="px-3
+    py-6
+    w-full
+    max-w-[220px]
+    md:max-w-[240px]
+    lg:max-w-[260px]
+    mx-auto"
+    >
       <div
         className={`
         bg-[#FAF8F4]
@@ -32,6 +40,11 @@ export default function WindowCard({ title, children, className = "" }) {
             font-semibold
             text-lg
           "
+            style={{
+              fontFamily: "'Pixelify Sans', sans-serif",
+              fontWeight: 500,
+              color: "#5a5450",
+            }}
           >
             {title}
           </h3>
@@ -75,7 +88,7 @@ export default function WindowCard({ title, children, className = "" }) {
         </div>
 
         {/* content */}
-        <div className="p-5">{children}</div>
+        <div className="sm:p-3 lg:p-5 ">{children}</div>
       </div>
     </div>
   );

@@ -7,12 +7,14 @@ export default function Footer() {
 
   return (
     <footer
-      className=" text-black py-12 px-6 text-start border-t-4 border-gray-900 mt-auto"
+      className=" text-black pb-5 pt-3 px-4 text-start border-t-4 border-gray-900 "
       style={{ backgroundColor: "#b8a89d" }}
     >
-      <p className="mb-3">&copy; 2026 My Portfolio. All rights reserved.</p>
+      <p className="mb-2 text-[12px]">
+        &copy; 2026 My Portfolio. All rights reserved.
+      </p>
 
-      <p className="text-xs text-black">Last update on {now}</p>
+      <p className="text-[10px] text-black">Last update on {now}</p>
     </footer>
   );
 }

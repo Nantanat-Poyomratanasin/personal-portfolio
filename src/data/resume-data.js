@@ -101,14 +101,6 @@ export const educationData = [
     duration: "2019 - 2023",
     honors: "Graduated with First class honors, GPA 3.62",
   },
-  //   },
-  //   {
-  //     degree: "Junior Software Developer Bootcamp",
-  //     field: "Full Stack Web Development",
-  //     school: "Generation Thailand",
-  //     duration: "Mar, 2026 - Now",
-  //     status: "In Progress",
-  //   },
 ];
 
 export const certificationsData = [

@@ -15,17 +15,19 @@ export default function About() {
   return (
     <div className="flex-1">
       {/* Skills Section */}
-      <section className="py-10 px-8" style={{ backgroundColor: "#e6d9cf" }}>
-        <div className="max-w-8xl max-h-[520px] mx-10">
+      <section
+        className="py-8 md:py-10 px-4 md:px-8"
+        style={{ backgroundColor: "#e6d9cf" }}
+      >
+        <div className="max-w-8xl mx-auto px-4 md:mx-10">
           <h2
-            className="text-5xl font-black text-center mb-2"
+            className="text-3xl md:text-4xl lg:text-5xl font-black text-center mb-2"
             style={{ color: "#5a5450" }}
           >
             Skills
           </h2>
           <p
-            className="text-center mb-8 text-lg"
-            style={{ color: "#6E6A67" }}
+            className="text-center mb-8 text-base md:text-lg"
             style={{
               fontFamily: "'Pixelify Sans', sans-serif",
               fontWeight: 400,
@@ -48,16 +50,19 @@ export default function About() {
       </section>
 
       {/* Experience Section */}
-      <section className="py-12 px-8" style={{ backgroundColor: "#d4c5b9" }}>
-        <div className="max-w-4xl mx-auto">
+      <section
+        className="py-8 md:py-12 px-4 md:px-8"
+        style={{ backgroundColor: "#d4c5b9" }}
+      >
+        <div className="max-w-4xl mx-auto px-5">
           <h2
-            className="text-5xl font-black text-center mb-3"
+            className="text-3xl md:text-4xl lg:text-5xl font-black text-center mb-3"
             style={{ color: "#5a5450" }}
           >
             Experience
           </h2>
           <p
-            className="text-center mb-12 text-lg"
+            className="text-center mb-8 text-base  md:text-lg"
             style={{
               fontFamily: "'Pixelify Sans', sans-serif",
               fontWeight: 400,
@@ -71,7 +76,7 @@ export default function About() {
             {experiences.map((exp, index) => (
               <div
                 key={index}
-                className="border-l-4 pl-6 relative"
+                className="border-l-4 pl-4 md:pl-6 relative mx-5 md:ml-0"
                 style={{ borderColor: "#8b7d75" }}
               >
                 <div
@@ -80,13 +85,13 @@ export default function About() {
                 ></div>
 
                 <h4
-                  className="text-2xl font-bold mb-1"
+                  className="lg:text-xl md:text-2xl font-bold mb-1"
                   style={{ color: "#5a5450" }}
                 >
                   {exp.title}
                 </h4>
                 <p
-                  className="text-sm mb-2 font-medium"
+                  className="text-sm  mb-2 font-medium"
                   style={{ color: "#6E6A67" }}
                 >
                   {exp.company}
@@ -98,7 +103,7 @@ export default function About() {
                   {exp.duration}
                 </p>
                 <ul
-                  className="list-disc list-inside space-y-2 text-sm font-medium"
+                  className="list-disc list-inside space-y-2 text-[12px] lg:text-[14px] font-medium"
                   style={{ color: "#6E6A67" }}
                 >
                   {exp.points?.map((point, pointIndex) => (
@@ -112,13 +117,19 @@ export default function About() {
       </section>
 
       {/* Education & Languages (centered heading, two equal columns) */}
-      <section className="py-12 px-8" style={{ backgroundColor: "#f3f0e8" }}>
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-black mb-3" style={{ color: "#5a5450" }}>
+      <section
+        className="py-8 md:py-12 px-4 md:px-8"
+        style={{ backgroundColor: "#f3f0e8" }}
+      >
+        <div className="max-w-5xl sm:mx-4 text-center px-4">
+          <h2
+            className="text-3xl md:text-4xl lg:text-5xl font-black text-center mb-3"
+            style={{ color: "#5a5450" }}
+          >
             Education & Languages
           </h2>
           <p
-            className="text-center mb-8 text-lg"
+            className="text-center mb-8 md:text-lg text-base"
             style={{
               fontFamily: "'Pixelify Sans', sans-serif",
               fontWeight: 400,
@@ -128,25 +139,28 @@ export default function About() {
             My academic journey
           </p>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start text-left">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start text-left mx-2">
             <div>
-              <div className="space-y-6">
+              <div className="space-y-6 ">
                 {educationData.map((edu, i) => (
-                  <div key={i} className="px-4">
+                  <div key={i} className="px-2 md:px-6 lg:px-4">
                     <h4
-                      className="text-xl font-semibold"
+                      className="lg:text-xl md:text-2xl font-bold mb-1"
                       style={{ color: "#5a5450" }}
                     >
                       {edu.degree} — {edu.field}
                     </h4>
                     <p
-                      className="text-sm font-medium"
+                      className="text-sm mb-2 font-medium"
                       style={{ color: "#6E6A67" }}
                     >
                       {edu.school} · {edu.duration}
                     </p>
                     {edu.honors && (
-                      <p className="text-sm" style={{ color: "#6E6A67" }}>
+                      <p
+                        className="sm:text-sm md:text-m"
+                        style={{ color: "#6E6A67" }}
+                      >
                         {edu.honors}
                       </p>
                     )}
@@ -156,17 +170,17 @@ export default function About() {
             </div>
 
             <div>
-              <div className="space-y-6">
+              <div className="space-y-6 px-2 md:px-6">
                 {languageData.map((lang, idx) => (
                   <div key={idx}>
                     <h4
-                      className="text-xl font-semibold"
+                      className="lg:text-xl md:text-xl font-semibold mb-1"
                       style={{ color: "#5a5450" }}
                     >
                       {lang.language}
                     </h4>
                     <p
-                      className="text-sm font-medium"
+                      className="text-sm mb-2 font-medium"
                       style={{ color: "#6E6A67" }}
                     >
                       {lang.level}{" "}
@@ -186,16 +200,19 @@ export default function About() {
       </section>
 
       {/* Certificates Section */}
-      <section className="py-12 px-8" style={{ backgroundColor: "#e6d9cf" }}>
-        <div className="max-w-4xl mx-auto">
+      <section
+        className="py-5 md:py-12 lg:px-4 md:px-6 sm:px-1"
+        style={{ backgroundColor: "#e6d9cf" }}
+      >
+        <div className="max-w-6xl sm:mx-4 mx-auto">
           <h2
-            className="text-5xl font-black text-center mb-2"
+            className="text-3xl md:text-4xl lg:text-5xl font-black text-center mb-3"
             style={{ color: "#5a5450" }}
           >
             Certificates
           </h2>
           <p
-            className="text-center mb-12 text-lg"
+            className="text-center mb-8 mx-10 text-base md:text-lg"
             style={{
               fontFamily: "'Pixelify Sans', sans-serif",
               fontWeight: 400,

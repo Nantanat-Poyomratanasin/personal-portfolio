@@ -7,14 +7,18 @@ export default function ProjectCard({ project }) {
       border-border
       rounded-3xl
       shadow-soft
-      py-4
-      px-8
+      py-3
+px-4
+md:px-6
       grid
       grid-cols-1
       lg:grid-cols-[1fr_280px]
-      gap-6
+      gap-4 md:gap-6
       items-center
-      max-w-[820px]
+      w-full
+      max-w-[360px]
+      md:max-w-[640px]
+      lg:max-w-[720px]
       mx-auto
     "
     >
@@ -30,23 +34,23 @@ export default function ProjectCard({ project }) {
         </div>
 
         {/* Title */}
-        <h3 className="text-xl font-semibold mb-3 text-text">
+        <h3 className="text-base md:text-lg lg:text-xl font-semibold mb-2 md:mb-3 text-text">
           {project.title}
         </h3>
 
         {/* Tags */}
-        <div className="flex flex-wrap gap-2 mb-3">
+        <div className="flex flex-wrap gap-2 mb-2 md:mb-3">
           {project.tags.map((tag, idx) => (
             <span
               key={idx}
               className="
-                px-3
-                py-1
-                rounded-full
-                text-[10px]
-                bg-[#F1ECE5]
-                text-gray-700
-              "
+                  px-3
+                  py-1
+                  rounded-full
+                  text-[10px]
+                  bg-[#F1ECE5]
+                  text-gray-700
+                "
             >
               {tag}
             </span>
@@ -54,14 +58,17 @@ export default function ProjectCard({ project }) {
         </div>
 
         {/* Category */}
-        <p className="text-sm text-gray-500 mb-2">{project.category}</p>
+        <p className="text-sm text-gray-500 mb-1">{project.category}</p>
 
         {/* Description */}
-        <p className="text-gray-700 leading-relaxed mb-6">
+        <p
+          className="text-[15px]
+        leading-7 md:text-md text-gray-700 mb-4 md:mb-6"
+        >
           {project.description}
         </p>
 
-        <div className="flex flex-wrap items-center gap-4">
+        <div className="flex flex-wrap items-center gap-3 md:gap-4">
           <a
             href={project.viewLink || project.link}
             target="_blank"
@@ -73,8 +80,9 @@ export default function ProjectCard({ project }) {
               border
               border-border
               rounded-xl
-              px-5
-              py-3
+              px-3 md:px-5
+              py-2 md:py-3
+              text-sm md:text-base
               w-fit
               hover:bg-[#F4EEE7]
               transition
@@ -99,8 +107,9 @@ export default function ProjectCard({ project }) {
               border
               border-border
               rounded-xl
-              px-5
-              py-3
+              px-3 md:px-5
+              py-2 md:py-3
+              text-sm md:text-base
               w-fit
               hover:bg-[#F4EEE7]
               transition
@@ -128,7 +137,7 @@ export default function ProjectCard({ project }) {
       <div
         className="
         relative
-        h-56
+        h-44 md:h-56
         rounded-2xl
         bg-[#EFE8DF]
         flex
@@ -136,11 +145,19 @@ export default function ProjectCard({ project }) {
         justify-center
       "
       >
-        <div className="text-6xl opacity-80">
-          {project.number === 1 && "🛒"}
-          {project.number === 2 && "✓"}
-          {project.number === 3 && "🌤️"}
-        </div>
+        <video
+          src={project.video}
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="
+    w-full
+    h-full
+    object-cover
+    rounded-2xl
+  "
+        />
 
         {/* Year */}
         {/* <div
