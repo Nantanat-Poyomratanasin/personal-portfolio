@@ -37,7 +37,7 @@ export default function CertificateSlider({ certificates }) {
 
         <div
           id="certificate-slider"
-          className="px-8 flex item-center gap-3 md:gap-8 lg:gap-6 sm:gap-8 justify-start md:justify-start overflow-x-auto overflow-y-hidden scroll-smooth flex-1 hide-scrollbar"
+          className="px-7 flex item-center gap-3 md:gap-8 lg:gap-6 sm:gap-8 justify-start md:justify-start overflow-x-auto overflow-y-hidden scroll-smooth flex-1 hide-scrollbar"
           style={{ scrollBehavior: "smooth", touchAction: "pan-x" }}
         >
           {certificates.map((cert, index) => (

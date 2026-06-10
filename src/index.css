@@ -451,7 +451,7 @@ html {
   transform: translateY(-3px) scale(1.1);
 }
 
-.hero-section {
+/* .hero-section {
   position: relative;
 }
 
@@ -485,7 +485,7 @@ html {
     92% 25%;
 
   animation: pixelTwinkle 2s steps(2) infinite;
-}
+} */
 
 .pixel-canvas {
   position: absolute;

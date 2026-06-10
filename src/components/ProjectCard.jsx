@@ -12,18 +12,18 @@ px-4
 md:px-6
       grid
       grid-cols-1
-      lg:grid-cols-[1fr_280px]
+      lg:grid-cols-[1fr_520px]
       gap-4 md:gap-6
       items-center
       w-full
       max-w-[360px]
-      md:max-w-[640px]
-      lg:max-w-[720px]
+      md:max-w-[680px]
+      lg:max-w-[940px]
       mx-auto
     "
     >
       {/* Left Side */}
-      <div className="flex flex-col">
+      <div className="flex flex-col ">
         {/* Number */}
         <div className="flex items-center gap-2 mb-4">
           <div className="w-2 h-2 rounded-full bg-black"></div>
@@ -137,7 +137,7 @@ md:px-6
       <div
         className="
         relative
-        h-44 md:h-56
+        h-44 md:h-80
         rounded-2xl
         bg-[#EFE8DF]
         flex

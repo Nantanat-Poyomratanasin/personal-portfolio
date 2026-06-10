@@ -51,7 +51,7 @@ export default function About() {
 
       {/* Experience Section */}
       <section
-        className="py-8 md:py-12 px-4 md:px-8"
+        className="relative project-constellation py-8 md:py-12 px-4 md:px-8"
         style={{ backgroundColor: "#d4c5b9" }}
       >
         <div className="max-w-4xl mx-auto px-5">
@@ -118,10 +118,10 @@ export default function About() {
 
       {/* Education & Languages (centered heading, two equal columns) */}
       <section
-        className="py-8 md:py-12 px-4 md:px-8"
+        className="py-8 md:py-12 md:px-8 lg:px-10 px-5"
         style={{ backgroundColor: "#f3f0e8" }}
       >
-        <div className="max-w-5xl sm:mx-4 text-center px-4">
+        <div className="max-w-6xl mx-auto text-center px-4">
           <h2
             className="text-3xl md:text-4xl lg:text-5xl font-black text-center mb-3"
             style={{ color: "#5a5450" }}
@@ -139,9 +139,9 @@ export default function About() {
             My academic journey
           </p>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start text-left mx-2">
-            <div>
-              <div className="space-y-6 ">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+            <div className="text-left lg:flex lg:justify-center">
+              <div className="space-y-6 max-w-md">
                 {educationData.map((edu, i) => (
                   <div key={i} className="px-2 md:px-6 lg:px-4">
                     <h4
@@ -169,12 +169,12 @@ export default function About() {
               </div>
             </div>
 
-            <div>
-              <div className="space-y-6 px-2 md:px-6">
+            <div className="text-left lg:flex lg:justify-center">
+              <div className="w-full max-w-sm text-left mx-2 md:mx-5 mb-1">
                 {languageData.map((lang, idx) => (
                   <div key={idx}>
                     <h4
-                      className="lg:text-xl md:text-xl font-semibold mb-1"
+                      className="lg:text-xl md:text-2xl font-bold mb-1"
                       style={{ color: "#5a5450" }}
                     >
                       {lang.language}
@@ -186,7 +186,7 @@ export default function About() {
                       {lang.level}{" "}
                     </p>
                     <p
-                      className="text-sm font-medium"
+                      className="text-sm font-medium mb-4"
                       style={{ color: "#6E6A67" }}
                     >
                       {lang.certification ? `${lang.certification}` : ""}
@@ -204,7 +204,7 @@ export default function About() {
         className="py-5 md:py-12 lg:px-4 md:px-6 sm:px-1"
         style={{ backgroundColor: "#e6d9cf" }}
       >
-        <div className="max-w-6xl sm:mx-4 mx-auto">
+        <div className="max-w-6xl mx-auto px-4">
           <h2
             className="text-3xl md:text-4xl lg:text-5xl font-black text-center mb-3"
             style={{ color: "#5a5450" }}

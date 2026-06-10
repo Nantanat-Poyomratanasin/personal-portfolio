@@ -1,56 +1,70 @@
-import { useEffect, useRef } from "react";
+// import { useEffect, useRef } from "react";
 
-export default function PixelHero() {
-  const canvasRef = useRef(null);
+// export default function PixelHero() {
+//   const canvasRef = useRef(null);
 
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    const ctx = canvas.getContext("2d");
+//   useEffect(() => {
+//     const canvas = canvasRef.current;
+//     const ctx = canvas.getContext("2d");
 
-    const resize = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = 400;
-    };
+//     let animationId;
+//     let width;
+//     let height;
+//     let time = 0;
 
-    resize();
+//     const resize = () => {
+//       width = canvas.width = window.innerWidth;
+//       height = canvas.height = window.innerHeight;
+//     };
 
-    const draw = () => {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
+//     resize();
 
-      const progress = Math.min(window.scrollY / window.innerHeight, 1);
+//     const spacing = 18;
 
-      for (let y = 0; y < canvas.height; y += 8) {
-        for (let x = 0; x < canvas.width; x += 8) {
-          const threshold =
-            (x + y * canvas.width) / (canvas.width * canvas.height);
+//     const animate = () => {
+//       time += 0.05;
 
-          if (progress > threshold) {
-            ctx.fillStyle = "#000";
-            ctx.fillRect(x, y, 6, 6);
-          }
-        }
-      }
+//       ctx.clearRect(0, 0, width, height);
 
-      requestAnimationFrame(draw);
-    };
+//       for (let y = 0; y < height; y += spacing) {
+//         for (let x = 0; x < width; x += spacing) {
+//           const opacity =
+//             0.08 + ((Math.sin(time + x * 0.01 + y * 0.01) + 1) / 2) * 0.15;
 
-    draw();
+//           ctx.fillStyle = `rgba(0,0,0,${opacity})`;
 
-    window.addEventListener("resize", resize);
+//           ctx.beginPath();
 
-    return () => {
-      window.removeEventListener("resize", resize);
-    };
-  }, []);
+//           ctx.arc(x, y + Math.sin(time + x * 0.02) * 2, 2, 0, Math.PI * 2);
 
-  return (
-    <canvas
-      ref={canvasRef}
-      style={{
-        width: "100%",
-        height: "400px",
-        display: "block",
-      }}
-    />
-  );
-}
+//           ctx.fill();
+//         }
+//       }
+
+//       animationId = requestAnimationFrame(animate);
+//     };
+
+//     animate();
+
+//     window.addEventListener("resize", resize);
+
+//     return () => {
+//       cancelAnimationFrame(animationId);
+//       window.removeEventListener("resize", resize);
+//     };
+//   }, []);
+
+//   return (
+//     <canvas
+//       ref={canvasRef}
+//       style={{
+//         position: "absolute",
+//         inset: 0,
+//         width: "100%",
+//         height: "100%",
+//         zIndex: 0,
+//         pointerEvents: "none",
+//       }}
+//     />
+//   );
+// }

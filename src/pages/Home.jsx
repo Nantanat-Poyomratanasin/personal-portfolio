@@ -12,7 +12,16 @@ export default function Home() {
       number: 1,
       title: "Readly",
       video: "/videos/readly.mp4",
-      tags: ["Full stack", "Web Development", "E-Commerce Project", "Agile"],
+      tags: [
+        "E-Commerce Project",
+        "JavaScript",
+        "React",
+        "REST API",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Agile",
+      ],
       // category: "End-to-end",
       description:
         "A full-stack e-commerce website built with React, Node.js, and MongoDB. Features include Search product, cart and order management, and secure Login or registration.",
@@ -60,9 +69,10 @@ export default function Home() {
 
   return (
     <div className="font-body hero-section">
-      {/* <PixelHero /> */}
-      <div
-        className="flex flex-col
+      <div className="relative">
+        {/* <PixelHero /> */}
+        <div
+          className="flex flex-col
     md:flex-row
     items-center
     justify-center
@@ -79,20 +89,21 @@ export default function Home() {
     lg:mb-6
 
     "
-      >
-        <Hero
-          name={profileData.name}
-          title={profileData.title}
-          summary={profileData.summary}
-          resumeLink={profileData.resume}
-        />
+        >
+          <Hero
+            name={profileData.name}
+            title={profileData.title}
+            summary={profileData.summary}
+            resumeLink={profileData.resume}
+          />
 
-        <ProfileCard />
+          <ProfileCard />
+        </div>
       </div>
 
       {/* Featured Projects Section */}
       <section style={{ backgroundColor: "#F5F1EA" }} className="relative">
-        <div className="mx-auto py-8 md:py-14 px-6 md:px-8">
+        <div className="max-w-7xl mx-auto py-8 md:py-14 px-6 md:px-8 ">
           {/* heading */}
           <div className="text-center mb-10 md:mb-15">
             <h2
