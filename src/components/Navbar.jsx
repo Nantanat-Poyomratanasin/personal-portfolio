@@ -72,7 +72,7 @@ text-[22px]"
           </NavLink>
 
           <a
-            href="https://github.com"
+            href="https://github.com/Nantanat-Poyomratanasin"
             target="_blank"
             rel="noopener noreferrer"
             className="pixel-nav-btn pb-1 transition"
