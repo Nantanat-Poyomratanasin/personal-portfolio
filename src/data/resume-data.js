@@ -13,7 +13,8 @@ export const profileData = {
   phone: "061-517-8000",
   location: "Bangkok, Thailand",
   summary:
-    "Junior Software Developer with a background in engineering and marketing, seeking to apply technical skills and problem-solving abilities in a Software Developer role.",
+    "Background in engineering and marketing, with technical skills in software development and strong problem-solving abilities, seeking opportunities in the technology industry.
+",
   linkedin: "https://www.linkedin.com/in/nantanat-poyomratanasin-b0bba52ab",
   github: "https://github.com/Nantanat-Poyomratanasin",
   resume: resumePdf,
