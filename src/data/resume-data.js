@@ -1,4 +1,5 @@
 import resumePdf from "./resume.pdf";
+import jsd from "./image/jsd.png";
 import PythonProgrammingMastery from "./image/PythonProgrammingMastery.png";
 import PythonProgramming from "./image/PythonProgramming.png";
 import EssentialPandas from "./image/EssentialPandas.png";
@@ -104,6 +105,12 @@ export const educationData = [
 ];
 
 export const certificationsData = [
+  {
+    title: "Junior Software Developer Program",
+    issuer: "Generation Thailand",
+    date: "June, 2026",
+    image: jsd,
+  },
   {
     title: "Advanced SQL for Data Analytics with BigQuery",
     issuer: "Skooldio",
