@@ -39,7 +39,7 @@ export const skillsData = [
   },
   {
     category: "Soft Skill",
-    skills: ["Growth Mindset", "Detail Oriented", "Communication"],
+    skills: ["Problem-Solving", "Detail-Oriented", "Communication"],
   },
   {
     category: "Other Skills",

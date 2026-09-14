@@ -10,6 +10,42 @@ export default function Home() {
   const projects = [
     {
       number: 1,
+      title: "Smart OPD Registration",
+      image: "/images/smart-opd-cover.png",
+      tags: [
+        "Business Analysis",
+        "User Story",
+        "MoSCoW",
+        "API Design",
+        "UML",
+        "Data Modeling",
+      ],
+      category: "Business Analyst Case Study",
+      description:
+        "A Business Analyst case study focused on designing a smarter OPD registration journey using kiosk self-registration, HIS integration, patient screening, and iterative delivery.",
+      viewLink: "/projects/smart-opd",
+      internal: true,
+    },
+
+    {
+      number: 2,
+      title: "Warehouse Management System",
+      image: "/images/wms-cover.png",
+      tags: [
+        "Business Analysis",
+        "Requirement Analysis",
+        "Process Flow",
+        "System Design",
+      ],
+      category: "Business Analysis Project",
+      description:
+        "A warehouse management system project focused on analyzing business processes and translating operational requirements into system workflows.",
+      viewLink: "/projects/wms",
+      internal: true,
+    },
+
+    {
+      number: 3,
       title: "Readly",
       video: "/videos/readly.mp4",
       tags: [
@@ -22,49 +58,49 @@ export default function Home() {
         "MongoDB",
         "Agile",
       ],
-      // category: "End-to-end",
       description:
-        "A full-stack e-commerce website built with React, Node.js, and MongoDB. Features include Search product, cart and order management, and secure Login or registration.",
+        "A full-stack e-commerce website built with React, Node.js, and MongoDB.",
       viewLink: "https://group-project-03-sprint-02-seven.vercel.app/",
       githubLink:
         "https://github.com/Nantanat-Poyomratanasin/group_project_03_sprint_02.git",
     },
-    {
-      number: 2,
-      title: "Flash card",
-      video: "/videos/flashcard.mp4",
-      tags: ["React", "JavaScript"],
-      // category: "Real-time",
-      description:
-        "A React flashcard app that lets users switch categories and track their score.",
-      viewLink: "https://jsd-12-hackaday-three.vercel.app/",
-      githubLink:
-        "https://github.com/Nantanat-Poyomratanasin/JSD12_Hackaday.git",
-    },
-    {
-      number: 3,
-      title: "Escape castle with Pokemon!",
-      video: "/videos/pokemonEscape.mp4",
-      tags: ["Node.js", "Async/Await", "React", "JavaScript"],
-      // category: "Data Visualization",
-      description:
-        "A React rescue game that sends random Pokemon to help users in Secret Room.",
-      viewLink: "https://pokemon-escape-castle.vercel.app/",
-      githubLink:
-        "https://github.com/Nantanat-Poyomratanasin/pokemon-escape-castle.git",
-    },
-    {
-      number: 4,
-      title: "Don't Bother Me! 👻",
-      video: "/videos/dont-bother-me.mp4",
-      tags: ["JavaScript", "DOM", "Tailwind", "CSS"],
-      // category: "Data Visualization",
-      description:
-        "A clicker game inspired from Cookie Clicker game built with JavaScript where players annoy a character by clicking, purchasing upgrades, and summoning ghosts for automatic clicks.",
-      viewLink: "https://jsd12-week-07-ruby.vercel.app/",
-      githubLink:
-        "https://github.com/Nantanat-Poyomratanasin/jsd12_week_07/tree/354f7e9d7741eed8bfaa2d7a5bef0b927170b7c7/dontBotherMegame",
-    },
+
+    // {
+    //   number: 4,
+    //   title: "Flash card",
+    //   video: "/videos/flashcard.mp4",
+    //   tags: ["React", "JavaScript"],
+    //   // category: "Real-time",
+    //   description:
+    //     "A React flashcard app that lets users switch categories and track their score.",
+    //   viewLink: "https://jsd-12-hackaday-three.vercel.app/",
+    //   githubLink:
+    //     "https://github.com/Nantanat-Poyomratanasin/JSD12_Hackaday.git",
+    // },
+    // {
+    //   number: 5,
+    //   title: "Escape castle with Pokemon!",
+    //   video: "/videos/pokemonEscape.mp4",
+    //   tags: ["Node.js", "Async/Await", "React", "JavaScript"],
+    //   // category: "Data Visualization",
+    //   description:
+    //     "A React rescue game that sends random Pokemon to help users in Secret Room.",
+    //   viewLink: "https://pokemon-escape-castle.vercel.app/",
+    //   githubLink:
+    //     "https://github.com/Nantanat-Poyomratanasin/pokemon-escape-castle.git",
+    // },
+    // {
+    //   number: 6,
+    //   title: "Don't Bother Me! 👻",
+    //   video: "/videos/dont-bother-me.mp4",
+    //   tags: ["JavaScript", "DOM", "Tailwind", "CSS"],
+    //   // category: "Data Visualization",
+    //   description:
+    //     "A clicker game inspired from Cookie Clicker game built with JavaScript where players annoy a character by clicking, purchasing upgrades, and summoning ghosts for automatic clicks.",
+    //   viewLink: "https://jsd12-week-07-ruby.vercel.app/",
+    //   githubLink:
+    //     "https://github.com/Nantanat-Poyomratanasin/jsd12_week_07/tree/354f7e9d7741eed8bfaa2d7a5bef0b927170b7c7/dontBotherMegame",
+    // },
   ];
 
   return (
