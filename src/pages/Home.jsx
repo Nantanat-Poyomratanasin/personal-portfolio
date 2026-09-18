@@ -5,43 +5,44 @@ import ProjectCard from "../components/ProjectCard";
 import SocialCard from "../components/SocialCard";
 import { profileData } from "../data/resume-data";
 import WalkingCat from "../components/WalkingCat";
+import smartOpdImg from "../data/image/SmartOPD.png";
+import wmsImg from "../data/image/WMS.png";
+import smartOpdPdf from "../data/projects/smart_OPD-project.pdf";
+import wmsPdf from "../data/projects/WMS__project.pdf";
 
 export default function Home() {
   const projects = [
     {
       number: 1,
       title: "Smart OPD Registration",
-      image: "/images/smart-opd-cover.png",
+      image: smartOpdImg,
       tags: [
         "Business Analysis",
         "User Story",
         "MoSCoW",
         "API Design",
-        "UML",
-        "Data Modeling",
+        "Sequence Diagram",
       ],
-      category: "Business Analyst Case Study",
+
       description:
         "A Business Analyst case study focused on designing a smarter OPD registration journey using kiosk self-registration, HIS integration, patient screening, and iterative delivery.",
-      viewLink: "/projects/smart-opd",
-      internal: true,
+      viewLink: smartOpdPdf,
     },
 
     {
       number: 2,
       title: "Warehouse Management System",
-      image: "/images/wms-cover.png",
+      image: wmsImg,
       tags: [
         "Business Analysis",
         "Requirement Analysis",
         "Process Flow",
         "System Design",
       ],
-      category: "Business Analysis Project",
+
       description:
         "A warehouse management system project focused on analyzing business processes and translating operational requirements into system workflows.",
-      viewLink: "/projects/wms",
-      internal: true,
+      viewLink: wmsPdf,
     },
 
     {

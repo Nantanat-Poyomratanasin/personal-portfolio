@@ -1,6 +1,7 @@
-import { Link } from "react-router-dom";
+import { useState } from "react";
 
 export default function ProjectCard({ project }) {
+  const [showImage, setShowImage] = useState(false);
   return (
     <div
       className="
@@ -59,9 +60,6 @@ md:px-6
           ))}
         </div>
 
-        {/* Category */}
-        <p className="text-sm text-gray-500 mb-1">{project.category}</p>
-
         {/* Description */}
         <p
           className="text-[15px]
@@ -72,11 +70,11 @@ md:px-6
 
         {/* BUTTONS */}
         <div className="flex flex-wrap items-center gap-3 md:gap-4">
-          {/* ถ้าเป็น Case Study ภายในเว็บ */}
-          {project.internal ? (
-            <Link
-              to={project.viewLink}
-              className="
+          <a
+            href={project.viewLink}
+            target="_blank"
+            rel="noreferrer"
+            className="
                 inline-flex
                 items-center
                 gap-2
@@ -89,43 +87,14 @@ md:px-6
                 hover:bg-[#F4EEE7]
                 transition
               "
-              style={{
-                fontFamily: "'Pixelify Sans', sans-serif",
-                fontWeight: 500,
-                color: "#5a5450",
-              }}
-            >
-              View Case Study →
-            </Link>
-          ) : (
-            /* ถ้าเป็น Project ที่เปิดเว็บภายนอก */
-            <a
-              href={project.viewLink}
-              target="_blank"
-              rel="noreferrer"
-              className="
-                inline-flex
-                items-center
-                gap-2
-                border
-                border-border
-                rounded-xl
-                px-4 md:px-5
-                py-2 md:py-3
-                text-sm md:text-base
-                hover:bg-[#F4EEE7]
-                transition
-              "
-              style={{
-                fontFamily: "'Pixelify Sans', sans-serif",
-                fontWeight: 500,
-                color: "#5a5450",
-              }}
-            >
-              View Project →
-            </a>
-          )}
-
+            style={{
+              fontFamily: "'Pixelify Sans', sans-serif",
+              fontWeight: 500,
+              color: "#5a5450",
+            }}
+          >
+            View Project →
+          </a>
           {/* GitHub Button */}
           {project.githubLink && (
             <a
@@ -184,7 +153,15 @@ md:px-6
           <img
             src={project.image}
             alt={project.title}
-            className="w-full h-full object-cover rounded-2xl"
+            onClick={() => setShowImage(true)}
+            className=" w-full
+    h-full
+    object-full
+    rounded-2xl
+    cursor-zoom-in
+    transition
+    duration-300
+    hover:scale-[1.02]"
           />
         ) : (
           /* ถ้ายังไม่มีทั้ง Video และ Image */
@@ -195,6 +172,50 @@ md:px-6
             }}
           >
             {project.title}
+          </div>
+        )}
+        {/* IMAGE MODAL */}
+        {showImage && project.image && (
+          <div
+            className="
+            fixed
+            inset-0
+            z-[9999]
+            bg-black/70
+            flex
+            items-center
+            justify-center
+            p-4
+            md:p-8
+          "
+            onClick={() => setShowImage(false)}
+          >
+            <button
+              onClick={() => setShowImage(false)}
+              className="
+              absolute
+              top-3
+              right-6
+              text-white
+              text-4xl
+              cursor-pointer
+            "
+            >
+              ×
+            </button>
+
+            <img
+              src={project.image}
+              alt={project.title}
+              className="
+              max-w-[95vw]
+              max-h-[90vh]
+              object-contain
+              rounded-2xl
+              shadow-2xl
+            "
+              onClick={(e) => e.stopPropagation()}
+            />
           </div>
         )}
       </div>
