@@ -174,6 +174,7 @@ md:px-6
             {project.title}
           </div>
         )}
+
         {/* IMAGE MODAL */}
         {showImage && project.image && (
           <div
@@ -190,32 +191,60 @@ md:px-6
           "
             onClick={() => setShowImage(false)}
           >
-            <button
-              onClick={() => setShowImage(false)}
-              className="
-              absolute
-              top-3
-              right-6
-              text-white
-              text-4xl
-              cursor-pointer
-            "
-            >
-              ×
-            </button>
+            {/* IMAGE WRAPPER */}
+            <div className="relative max-w-[95vw]">
+              {/* CLOSE BUTTON */}
+              <button
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setShowImage(false);
+                }}
+                className="
+          absolute
+          -top-6
+          right-1
 
-            <img
-              src={project.image}
-              alt={project.title}
-              className="
+          z-10
+
+          w-9
+          h-9
+
+          flex
+          items-center
+          justify-center
+
+          rounded-full
+          bg-white
+          text-[#5a5450]
+
+          text-2xl
+          font-bold
+
+          shadow-md
+          cursor-pointer
+
+          hover:bg-[#F4EEE7]
+          transition
+        "
+                aria-label="Close image"
+              >
+                ×
+              </button>
+
+              {/* LARGE IMAGE */}
+              <img
+                src={project.image}
+                alt={project.title}
+                className="
               max-w-[95vw]
               max-h-[90vh]
               object-contain
               rounded-2xl
               shadow-2xl
             "
-              onClick={(e) => e.stopPropagation()}
-            />
+                onClick={(e) => e.stopPropagation()}
+              />
+            </div>
           </div>
         )}
       </div>
